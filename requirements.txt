@@ -1,0 +1,24 @@
+# 1. 协议解析与 TFRecord 读取（轻量、跨平台、无需 TensorFlow）
+protobuf>=4.25.0
+tfrecord>=1.14.0
+crc32c>=2.4.0
+
+# 2. 数学与空间计算（点云极坐标逆投影、4x4 外参矩阵转四元数）
+numpy>=1.24.0
+scipy>=1.10.0
+
+# 3. MCAP 标准容器与 Foxglove 可视化 Schema 支持
+mcap>=1.1.0
+mcap-protobuf-support>=0.5.0
+foxglove-schemas-protobuf>=0.3.0
+
+# 4. 高效压缩支持（MCAP 块压缩）
+lz4>=4.0.0
+zstandard>=0.20.0
+
+# 5. LanceDB 入库（mcap_to_lancedb.py / query_lancedb.py）
+# 注意: protobuf 需与 foxglove-schemas-protobuf 的 gencode 主版本一致
+# (0.4.0 为 5.29.x)；pandas 需 >=2.2 以兼容 numpy 2.x
+lancedb>=0.15.0
+pyarrow>=14.0.0
+pandas>=2.2.0

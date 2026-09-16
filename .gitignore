@@ -2,3 +2,8 @@
 __pycache__/
 .vscode
 data
+*.log
+crates/**/target
+target/
+ffmpeg
+5
